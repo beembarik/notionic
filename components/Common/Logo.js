@@ -7,6 +7,7 @@ const Logo = (props) => (
     width='30'
     height='30'
     viewBox="0 0 100 100"
+    fill='currentColor'
   >
     <g transform='translate(0.000000,10) scale(0.105000,0.105000)'>
       <circle cx={410.7} cy={89.3} r={89.3} />
