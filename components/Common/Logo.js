@@ -26,11 +26,7 @@ const Logo = (props) => (
           }}
         />
       </g>
-    </switch>
   </svg>
-)
-export default SvgComponent
-
 )
 
 export default Logo
