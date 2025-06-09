@@ -65,7 +65,6 @@
       "unrs-resolver"
     ],
     "onlyBuiltDependencies": [
-      "sharp",
       "unrs-resolver"
     ]
   }
