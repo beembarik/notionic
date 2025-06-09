@@ -4,7 +4,7 @@ import BLOG from '@/blog.config'
 const Social = () => {
   return (
     <div className='flex gap-3'>
-      <Link href={`${BLOG.socialLink.telegram}`} scroll={false}>
+      <Link href={`${BLOG.socialLink.telegram}`} scroll={false} legacyBehavior>
         <a
           target='_blank' aria-label='Telegram'
           className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
@@ -22,7 +22,7 @@ const Social = () => {
           </svg>
         </a>
       </Link>
-      <Link href={`${BLOG.socialLink.twitter}`} scroll={false}>
+      <Link href={`${BLOG.socialLink.twitter}`} scroll={false} legacyBehavior>
         <a
           target='_blank' aria-label='Twitter'
           className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
@@ -40,7 +40,7 @@ const Social = () => {
           </svg>
         </a>
       </Link>
-      <Link href={`${BLOG.socialLink.github}`} scroll={false}>
+      <Link href={`${BLOG.socialLink.github}`} scroll={false} legacyBehavior>
         <a
           target='_blank' aria-label='Github'
           className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
@@ -58,7 +58,7 @@ const Social = () => {
           </svg>
         </a>
       </Link>
-      <Link href={`${BLOG.socialLink.kofi}`} scroll={false}>
+      <Link href={`${BLOG.socialLink.kofi}`} scroll={false} legacyBehavior>
         <a
           target='_blank' aria-label='Kofi'
           className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
@@ -77,7 +77,7 @@ const Social = () => {
           </svg>
         </a>
       </Link>
-      <Link href={`${BLOG.socialLink.trakteer}`} scroll={false}>
+      <Link href={`${BLOG.socialLink.trakteer}`} scroll={false} legacyBehavior>
         <a
           target='_blank' aria-label='Trakteer'
           className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'

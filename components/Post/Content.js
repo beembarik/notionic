@@ -8,7 +8,7 @@ import NotionRenderer from '@/components/Post/NotionRenderer'
 
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 
-export default function Content (props) {
+function Content (props) {
   const { frontMatter, blockMap, pageTitle } = props
 
   return (
@@ -57,3 +57,5 @@ Content.propTypes = {
   blockMap: PropTypes.object.isRequired,
   pageTitle: PropTypes.string
 }
+
+export default Content

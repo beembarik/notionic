@@ -1,11 +1,11 @@
-import BLOG from '@/blog.config'
+import BLOG, { notionPageId } from '@/blog.config'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { MailIcon, ThumbUpIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 
-const PostFooter = () => {
+const PostFooter = ({ postId }) => {
   const { locale } = useRouter()
   const router = useRouter()
   const t = lang[locale]
@@ -66,7 +66,7 @@ const PostFooter = () => {
                     </div>
                 )}
             </div>
-        </div>
+          </div>
           <button
             onClick={() => router.push(BLOG.path || '/contact')}
             className='flex gap-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-500 hover:text-gray-600 dark:hover:text-gray-300 text-sm rounded-lg px-4 py-2'

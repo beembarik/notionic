@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 import BLOG from '@/blog.config'
 
-export default function TableOfContents ({ blockMap, frontMatter, pageTitle }) {
+function TableOfContents ({ blockMap, frontMatter, pageTitle }) {
   let collectionId, page
   if (pageTitle) {
     collectionId = Object.keys(blockMap.block)[0]
@@ -67,3 +67,5 @@ TableOfContents.propTypes = {
   frontMatter: PropTypes.object.isRequired,
   pageTitle: PropTypes.string
 }
+
+export default TableOfContents
