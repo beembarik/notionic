@@ -23,7 +23,6 @@ const BLOG = {
     books: true,
     friends: true
   },
-  showWeChatPay: true,
   previewImagesEnabled: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateHost: 'og-zl.vercel.app', // The link to generate OG image, don't end with a slash
@@ -36,13 +35,13 @@ const BLOG = {
     trakteer: 'https://trakteer.id/baarik/tip'
   },
   seo: {
-    keywords: ['Notionic', 'Zuolan', 'Blog'],
+    keywords: ['Notionic', 'Blog'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionSpacesId: process.env.NOTION_SPACES_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Useful if you prefer not to make your database public
-  notionDomain: 'baarik.notion.site',
+  notionDomain: 'beemstalks.notion.site',
   telegramToken: process.env.TELEGRAM_TOKEN, // The token of your Telegram bot
   telegramChatId: '812174102', // The chat id of your Telegram bot
   telegramChannelUrl: '', // The link of your Telegram channel
