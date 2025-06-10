@@ -5,25 +5,40 @@ import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import BLOG from '@/blog.config'
 
 export async function getStaticProps() {
-  const posts = await getAllPosts({ onlyNewsletter: true })
-
-  const heros = await getAllPosts({ onlyHidden: true })
-  const hero = heros.find((t) => t.slug === 'newsletter')
-
-  let blockMap
   try {
-    blockMap = await getPostBlocks(hero.id)
-  } catch (err) {
-    console.error(err)
-    // return { props: { post: null, blockMap: null } }
-  }
+    // Get all newsletter posts
+    const posts = await getAllPosts({ onlyNewsletter: true })
 
-  return {
-    props: {
-      posts,
-      blockMap
-    },
-    revalidate: 1
+    // Get the hero content for newsletter page
+    const heros = await getAllPosts({ onlyHidden: true })
+    const hero = heros.find((t) => t.slug === 'newsletter')
+
+    let blockMap = null
+    try {
+      if (hero) {
+        blockMap = await getPostBlocks(hero.id)
+      }
+    } catch (err) {
+      console.error('Error fetching newsletter hero blocks:', err)
+      // Keep blockMap as null on error
+    }
+
+    return {
+      props: {
+        posts,
+        blockMap
+      },
+      revalidate: 1
+    }
+  } catch (err) {
+    console.error('Error in newsletter getStaticProps:', err)
+    return {
+      props: {
+        posts: [],
+        blockMap: null
+      },
+      revalidate: 1
+    }
   }
 }
 
